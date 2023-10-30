@@ -1,0 +1,129 @@
+:root { /* sets global variables for entire page */
+  --white: #f8f6fe;
+  --blue: #3c61a5;
+  --palerblue:#9480c6;
+  --lavender: #eebff6e0;
+  --linkblue:#3989de;
+  --grey:#22323b;
+}
+
+/* '*' is a universal selector, i.e. applies to all elements */
+
+* {
+  color: var(--fontColor);
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+body {
+    background: var(--bg);
+    text-align: left;
+    padding: 30px;
+}
+
+h1{
+    color: var(--blue);
+    font-size: 50px;
+    padding: none;
+    text-shadow: 2px 2px var(--palerblue), 3px 3px var(--lavender);
+    opacity: 75%;
+}
+
+h2{
+    padding-left: 40px  
+}
+
+ol{
+    padding-left: 65px  
+}
+.project {
+    font-size: 20px;
+    padding-left: 40px;
+}
+.container {
+    width: 84%;
+    height: 200px;
+    border: 1px solid #ccc;
+    background-color: rgb(255, 255, 255);
+    overflow-y: auto;  
+    padding: 20px;
+    position: relative;
+    left: 35px;
+}
+
+.code-container {
+    padding: 10px;
+    background-color: #333;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.API_body{
+    color: var(--grey);
+}
+h5{
+    color: var(--grey);
+}
+code{
+    color: #fff;
+    font-family: 'Courier New', monospace;
+}
+
+#OOH_text{
+    color: var(--grey);
+}
+
+.link{
+    color: var(--linkblue);
+    text-decoration: underline;
+}
+.btn {
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+    font-size: 15px;
+    border-radius: 5%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+    padding: 3px;
+}
+
+.btn:focus { outline-style: none; } /*once you click the button this happens*/
+
+.faq-list {
+    list-style: none;
+    padding: 0;
+}
+
+.faq-item {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.question {
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold;
+    color: var(--grey);
+}
+
+h3{
+    color: var(--grey);
+}
+.answer {
+    display: none;
+    color: var(--grey);
+}
+
+.light-theme {
+    --bg: var(--white);
+    --fontColor: var(--grey);
+    --btnBg: var(--grey);
+    --btnFontColor: var(--white);
+}
+.dark-theme {
+    --bg: var(--grey);
+    --fontColor: var(--white);
+    --btnBg: var(--white);
+    --btnFontColor: var(--grey);
+}
+
+ 

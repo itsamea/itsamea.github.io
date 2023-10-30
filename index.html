@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ola_el_awadly(a)</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body class="light-theme">
+  <h1 class="title">/* mx.el_awadly's UX writing portfolio */
+    <div>
+    <button class="btn">dark_mode</button>
+    </div>
+  </h1>
+  <div id="table-of-contents">
+    <h2>Contents</h2>
+    <ol>
+        <li><a href="#OOH">OOH Email</a></li>
+        <li><a href="#FAQ">FAQs (Sample)</a></li>
+        <li><a href="#Read">Read Aloud Guide</a></li>
+        <li><a href="#API">Internal API Guide (Sample)</a></li>
+        <li><a href="#Article">Article: 'Future of Communication'</a></li>
+    </ol>
+    <br><br>
+</div>
+  <p class="project" id="OOH">OOH Email <br>
+    <div class="container">
+      <p id="OOH_text"> Hello,<br><br>
+      Thank you for contacting the Luminance Support team. Our customer service hours are Monday to Friday, 9:00 AM to 6:00 PM BST. We aim to respond to all queries within one working day 
+      but you can find the answers to common questions on our <span class="link">FAQ page</span>.
+      You can raise a support ticket at any time or organise a callback through our customer support <span class="link">portal</span> and one of our team will be in contact as soon as possible. <br><br>
+      <b>For urgent queries, please contact our out of hours support hotline at [Hotline Number].</b>
+      <br><br>[Support Signature]</p>
+    </div>
+  </p>
+  <br><br>
+  <p class="project" id="FAQ">FAQs (Sample)<br>
+    <div class="container">
+      <h3>FAQs</h3>
+      <ul class="faq-list">
+        <li class="faq-item">
+            <div class="question">> 'I've lost/forgotten my password'</div>
+            <div class="answer"><br>You can reset your password your password by 
+              clicking the 'Forgotten password' link on the login page, or by clicking <span class='link'>here</span>.</div>
+        </li>
+        <li class="faq-item">
+            <div class="question">> 'My password is no longer working'</div>
+            <div class="answer"> <br> Please try resetting your password by following the above steps. 
+              If you are still unable to log in, please ensure you are using Luminance in Chrome or Edge (Firefox support coming soon!). 
+              For security reasons some of our clients request we limit the IP addresses from which employees can login, 
+              please ensure you are logged into the correct network or VPN. Contact your system administrator 
+              if you are unsure whether you are logged into the correct network, or <span class='link'>Contact Us</span> if you still require our assistance.</div>
+        </li>
+        <li class="faq-item">
+          <div class="question">> 'Incorrect number of documents'</div>
+          <div class="answer"><br>If you have recently deleted or uploaded a large number of documents, please be aware it may take a few minutes (up to an hour) for the correct number of documents to display.</div>
+      </li>
+      <li class="faq-item">
+          <div class="question">> 'Slowness/Buffering'</div>
+          <div class="answer"><br>Please check your internet connection and try logging out and logging back into your account. If the slowness/buffering persists please <span class='link'>Contact Us</span>.</div>
+      </li>
+      <li class="faq-item">
+          <div class="question">> 'My Upload is stuck!'</div>
+          <div class="answer"><br>We do not recommend making large uploads (>5GB) directly through your browser. Please try compressing the files into a .zip, uploading the files in smaller batches or <span class='link'>Contact Us</span>, and one of our team will discuss alternatives for the secure upload of your documents.</div>
+      </li>
+      </ul>
+    </div>
+  </p>
+  <br><br>
+  <p class="project" id="Read">Read Aloud Guide <br> <br>
+    <iframe src="Read Aloud.pdf" width="90%" height="420"></iframe>
+  </p>
+  <br><br>
+  <p class="project" id="API"> Internal API Guide (Sample) <br>
+    <div class="container">
+      <h3>What is LumPy?</h3>
+      <p class="API_body">LumPy is a Python based RESTful API which will allow 
+        internal teams to carryout basic operations. RESTful APIs work through 
+        the construction of URLs to reach specific end points. To construct the 
+        beginning of any URL, first generate an access token <span class="link">here</span>, then specify a path. <br><br>
+        Examples of endpoints include: '../documents' '../users' and '../document_events'. 
+        <br><br>In the same way that URLs are used by your browser, 
+        LumPy uses HTTP methods, such as GET, POST, PATCH, and DELETE. 
+        Here are some examples of these methods in action:<br><br>
+
+      <h5>'I want to find all documents that are upload_state: pending'</h5>
+      <div class="code-container">
+          <code>
+            documents = .. GET ..&lt;room_id&gt;/documents
+            <br>for doc in documents if upload_state=='pending'
+            <br>print documents.id   
+          </code>
+      </div>
+      <br>
+      <h5>'I want to delete a user/document'</h5>
+      <div class="code-container">
+          <code>
+            DELETE ../users/&lt;user_id&gt; <br>
+            DELETE ../documents/id=&lt;doc_id&gt;
+          </code>
+      </div>
+      <br>
+      <h5>'I want to find all deletions made by a specific user'</h5>
+      <div class="code-container">
+          <code>
+            GET ../document_events/user_id=&lt;user_id&gt;/event='delete'
+          </code>
+      </div>
+      <br>
+      <h5>'I want to change user permissions'</h5>
+      <div class="code-container">
+          <code>
+            PATCH ../users/ id=&lt;user_id&gt;/access='admin'
+          </code>
+      </div>
+      <br>
+      <h5>'I want to create a new user'</h5>
+      <div class="code-container">
+          <code>
+            POST -d {"username": "&lt;email&gt;", "access": "nonadmin"}' ../rooms/id=&lt;room_id&gt;/users
+          </code>
+      </div>
+    </p>
+  </div>
+  </p>
+  <br><br>
+  <p class="project" id="Article"> Article: 'Future of Communication' <br><br>
+    <iframe src="3di Article.pdf" width="90%" height="420"></iframe>
+  </p>
+
+  <script src="app.js"></script> <! adding to end of script means content displays first then loads script>
+  <noscript>You need to enable JavaScript to view the full site.</noscript>
+</body>
+</html>
