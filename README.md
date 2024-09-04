@@ -1,2 +1,2 @@
 # itsamea.github.io
-UX Writing Portfolio
+Writing Portfolio
